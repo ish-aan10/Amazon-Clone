@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout Page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">   
+
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/checkout.css">
+    <link rel="stylesheet" href="styles/header-checkout.css">
+</head>
+<body>
+    <div class="header">
+        <div class="left-section">
+            <a class="header-link" href="index.html">
+                <img src="images/icons/amazon_black-logo.png" class="amazon-logo">
+            </a>
+        </div>
+        <div class="mid-section">
+            <div class="checkout-text">Checkout</div>
+        </div>
+        <div class="right-section">
+            <div class="lock-link header-link">
+                <img src="images/icons/checkout-lock-icon.png" class="lock-icon">
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="page-title">Review your order</div>
+        
+        <div class="checkout-grid">
+            <div class="order-summary js-order-summary"></div>        
+
+            <div class="payment-summary">
+                <div class="payment-summary-title">
+                    Order Summary
+                </div>
+                <div class="payment-summary-row">
+                    <div>Items (3):</div>
+                    <div class="payment-summary-money">Price</div>
+                </div>
+                <div class="payment-summary-row">
+                    <div>Shipping &amp; handling:</div>
+                    <div class="payment-summary-money">Price</div> 
+                </div>
+                <div class="payment-summary-row subtotal-row">
+                    <div>Total before tax:</div>
+                    <div class="payment-summary-money">Price</div> 
+                </div>
+                <div class="payment-summary-row">
+                    <div>G.S.T. (18%):</div>
+                    <div class="payment-summary-money">Price</div> 
+                </div>
+                <div class="payment-summary-row total-row">
+                    <div>Order total:</div>
+                    <div class="payment-summary-money">Price</div> 
+                </div>
+
+                <button class="place-order-button button-primary">Place your order</button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="scripts/checkout.js"></script>
+</body>
+</html>

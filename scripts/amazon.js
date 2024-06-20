@@ -66,9 +66,8 @@ const addedMessageTimeout = {};
 
 document.querySelectorAll(".js-add-to-cart").forEach((button) => {
     button.addEventListener("click", () => {
-        const  productId = button.dataset.productId;
-        const quantity = Number
-        (document.querySelector(`.js-quantity-selector-${productId}`).value);
+        const productId = button.dataset.productId;
+        const quantity = Number(document.querySelector(`.js-quantity-selector-${productId}`).value);
 
         const addedMessage = document.querySelector(`.js-added-message-${productId}`);
         addedMessage.classList.add("added-to-cart-2");

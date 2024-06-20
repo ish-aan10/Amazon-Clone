@@ -126,11 +126,17 @@
     margin-left: 10px;
 }
 
+.payment-summary-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
 .payment-summary-row{
     display: grid;
     grid-template-columns: 1fr auto;
     font-size: 15px;
-    margin-bottom: 9px;
+    margin-bottom: 5px;
 }
 
 .payment-summary-money {

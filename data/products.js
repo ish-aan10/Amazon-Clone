@@ -1,3 +1,5 @@
+import { formatCurrency } from "../scripts/utils/money.js";
+
 export function getProduct(productId) {
     let matchingProduct;
 
@@ -9,7 +11,43 @@ export function getProduct(productId) {
 
     return matchingProduct;
 }
-    
+
+
+class Product {
+    id;
+    image;
+    name;
+    rating;
+    pricePaisa;
+
+    constructor(productDetails) {
+        this.id = productDetails.id;
+        this.image = productDetails.image;
+        this.name = productDetails.name;
+        this.rating = productDetails.rating;
+        this.pricePaisa = productDetails.pricePaisa;
+    }
+
+    getStarsUrl() {
+        return `images/rating/rating-${this.rating.stars * 10}.png`;
+    }
+
+    getPrice() {
+        return `&#8377; ${formatCurrency(this.pricePaisa)}`;
+    }
+}
+
+const product1 = new Product({
+    id: '1',
+    image: 'images/products/product_1.webp',
+    name: 'Cosmic Byte ARES Wireless Controller for PC',
+    rating: {
+        stars: 4.0,
+        count: 3345
+    },
+    pricePaisa: 189900
+});
+
 export const products = [{
     id: '1',
     image: 'images/products/product_1.webp',
@@ -118,4 +156,6 @@ export const products = [{
         count: 24657
     },
     pricePaisa: 124900
-},];
+},].map((productDetails) => {
+    return new Product(productDetails);
+});

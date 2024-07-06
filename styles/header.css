@@ -149,3 +149,16 @@
     width: 26px;
     text-align: center;
 }
+
+@media (max-width: 800px) {
+    .location-button, .lang-button, .order-link, .all-button{
+        display: none;
+    }
+    .search-bar {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    .mid-section {
+        margin: 0 10px;
+    }
+}

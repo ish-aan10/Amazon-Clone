@@ -54,9 +54,8 @@
 }
 
 .product-name {
-    height: 90px;
+    height: 100px;
     margin-bottom: 5px;
-    overflow: hidden;
 }
 
 .product-rating-container {
